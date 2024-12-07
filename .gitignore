@@ -1,0 +1,105 @@
+# Каталоги Unity, которые не нужно добавлять в Git (содержат сгенерированные и временные файлы)
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+
+# Большие файлы, которые могут содержать чувствительные данные
+/[Mm]emoryCaptures/
+
+# Большие файлы с записями экрана
+/[Rr]ecordings/
+
+# Плагин инструментов Asset Store
+/[Aa]ssets/AssetStoreTools*
+
+# Автогенерируемый плагин для JetBrains Rider
+/[Aa]ssets/Plugins/Editor/JetBrains*
+
+# Кэш Visual Studio
+.vs/
+.vsconfig
+
+# Кэш Gradle
+.gradle/
+
+# Автогенерируемые файлы решений и проектов для VS/MD/Consulo
+ExportedObj/
+.consulo/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Метаданные, сгенерированные Unity3D
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# Файл, сгенерированный Unity3D при краш-отчете
+sysinfo.txt
+
+# Сборки проекта
+*.apk
+*.aab
+*.unitypackage
+*.app
+
+# Файл, сгенерированный Crashlytics
+crashlytics-build.properties
+
+# Адресуемые ресурсы (Addressables) для Unity
+/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
+
+# Временные сгенерированные Android Assets
+/[Aa]ssets/[Ss]treamingAssets/aa.meta
+/[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# Конфигурация среды разработки JetBrains Rider и Visual Studio Code
+.idea/
+.vscode/
+
+# Логи ошибок и кэши, сгенерированные Unity
+*.log
+*.stacktrace
+
+# Настройки для версии Unity Collaborate
+/[Cc]ollab/
+
+# Временные файлы Unity и профили времени исполнения
+/[Pp]rofileData/
+
+# Файлы настроек, уникальные для текущего проекта
+/[Pp]rojectSettings/ProjectSettings.asset
+/[Pp]rojectSettings/EditorSettings.asset
+
+# Локальные файлы настроек пользователя
+*.swp
+*.lock
+.DS_Store
+Thumbs.db
+
+# Файлы настроек скинов и окон редактора Unity
+/[Ll]ibrary/CurrentLayout.dwlt
+
+# Кэширование результатов сборки Addressables
+/[Bb]uilds/[Aa]ddressables/[Ss]tateCache/
+
+# Temporary Lighting Data, которые можно восстановить при необходимости
+/[Ll]ightingData.asset
+
+# Логи ошибок от Unity Cloud Build
+/UnityCloudBuild/

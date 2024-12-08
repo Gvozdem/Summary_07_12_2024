@@ -7,6 +7,7 @@ public class PanelManager : MonoBehaviour
 {
     public CheckpointManager _player; 
     public GameObject _panel;
+    public GameObject _panelInfo;
 
 
     public AudioSource _music;
@@ -14,13 +15,16 @@ public class PanelManager : MonoBehaviour
 
     private void Start()
     {
-
         _music = GetComponent<AudioSource>();
         musicFlag = true;
         if (SceneManager.GetActiveScene().name != "MenuScene")
         {
             _player = GameObject.Find("Player").GetComponent<CheckpointManager>();
             _panel = GameObject.Find("EscapePanel");
+            if (SceneManager.GetActiveScene().name == "Scene_1")
+            {
+                _panelInfo = GameObject.Find("InfoPanel");
+            }
         }
         else
         {
@@ -74,5 +78,13 @@ public class PanelManager : MonoBehaviour
             _music.Play();
             musicFlag = !musicFlag;
         }
+    }
+    private void Update()
+    {
+        if (Input.anyKeyDown)
+            if (_panelInfo != null && _panelInfo.activeSelf)
+            {
+                _panelInfo.SetActive(false);
+            }
     }
 }

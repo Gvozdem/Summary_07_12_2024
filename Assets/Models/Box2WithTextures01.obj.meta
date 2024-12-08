@@ -1,24 +1,9 @@
 fileFormatVersion: 2
-guid: b2723fcca723f194cb1709137961dd00
+guid: ee86a009ea2de7d40b79e084be0bdd92
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Cylinder.001_PipeMatMat
-    second: {fileID: 2100000, guid: d2e3e5540622d40488e7dd62d0abdad1, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Cylinder.002_PipeMatMat
-    second: {fileID: 2100000, guid: d2e3e5540622d40488e7dd62d0abdad1, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Cylinder_PipeMatMat
-    second: {fileID: 2100000, guid: d2e3e5540622d40488e7dd62d0abdad1, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0

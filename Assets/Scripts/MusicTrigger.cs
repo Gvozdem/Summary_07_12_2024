@@ -5,12 +5,12 @@ using UnityEngine;
 public class MusicTrigger : MonoBehaviour
 {
     public float triggerRadius; // Радиус, в пределах которого музыка будет включаться/выключаться
-    private AudioSource audioSource;
+    [SerializeField] private AudioSource audioSource;
     private Transform player;
 
     private void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+        //audioSource = GetComponent<AudioSource>();
         player = GameObject.Find("Player").transform;
     }
 

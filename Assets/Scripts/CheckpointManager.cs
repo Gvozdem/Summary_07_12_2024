@@ -65,7 +65,7 @@ public class CheckpointManager : MonoBehaviour
         }
 
         // Возрождаем персонажа на чекпоинте, если он упал
-        if (!controller.isGrounded && transform.position.y < cheackpointTransforms[currentCheckpointIndex].position.y - 5f)
+        if (!controller.isGrounded && transform.position.y < cheackpointTransforms[currentCheckpointIndex].position.y - 20f)
         {
             Respawn();
         }
@@ -148,7 +148,7 @@ public class CheckpointManager : MonoBehaviour
     private void LoadNextScene()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        if (currentSceneIndex == 10)
+        if (currentSceneIndex == 3)
         {
             SceneManager.LoadScene(1);
         }

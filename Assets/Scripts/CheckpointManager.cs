@@ -4,17 +4,26 @@ using UnityEngine.SceneManagement;
 
 public class CheckpointManager : MonoBehaviour
 {
+    public PanelManager _panelManager;
+
     public Transform[] cheackpointTransforms;
     private vThirdPersonController controller;
     private int currentCheckpointIndex = 0;
 
     private float lastInputTime = 0f;
-    private float idleTimeLimit = 60f; // 60 секунд
+    public float idleTimeLimit = 60f; // 60 секунд
 
     private Transform platformsParent;
 
+    public float updateFlightSpeed = 10f;
+
+
+
     private void Start()
     {
+        _panelManager = GameObject.Find("Canvas").GetComponent<PanelManager>();
+        _panelManager.HideCursor();
+
         lastInputTime = Time.time;
         controller = GetComponent<vThirdPersonController>();
         if (cheackpointTransforms.Length == 0)
@@ -41,7 +50,7 @@ public class CheckpointManager : MonoBehaviour
         // Ускорение в воздухе при зажатой ЛКМ
         if (!controller.isGrounded && Input.GetMouseButtonDown(0))
         {
-            controller.airSpeed = 10;
+            controller.airSpeed = updateFlightSpeed;
         }
         // Проверяем, достиг ли персонаж нового чекпоинта
         if (controller.isGrounded && IsOnCheckpoint())
@@ -60,6 +69,14 @@ public class CheckpointManager : MonoBehaviour
         {
             Respawn();
         }
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            if (!_panelManager._panel.activeSelf)
+            {
+                _panelManager.ShowCursor();
+                _panelManager.ShowPanel();
+            }
+        }
     }
 
     private void InitializeCheckpointTransforms()
@@ -76,14 +93,12 @@ public class CheckpointManager : MonoBehaviour
                 checkpointCount++;
             }
         }
-        Debug.Log(checkpointCount);
         cheackpointTransforms = new Transform[checkpointCount];
         checkpointCount = 0;
         foreach (Transform child in platformTransforms)
         {
             if (child.Find("Cheackpoint") != null)
             {
-                Debug.Log($"{child.Find("Cheackpoint").transform}");
                 cheackpointTransforms[checkpointCount++] = child.Find("Cheackpoint").transform;
             }
         }
@@ -93,7 +108,7 @@ public class CheckpointManager : MonoBehaviour
     {
         for (int i = 0; i < cheackpointTransforms.Length; i++)
         {
-            if (Vector3.Distance(transform.position, cheackpointTransforms[i].position) < 5f && currentCheckpointIndex < i)
+            if (Vector3.Distance(transform.position, cheackpointTransforms[i].position) < 3f && currentCheckpointIndex < i)
             {
                 currentCheckpointIndex = i;
 
@@ -133,13 +148,15 @@ public class CheckpointManager : MonoBehaviour
     private void LoadNextScene()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        if (currentSceneIndex == 9)
+        if (currentSceneIndex == 10)
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         }
         else
         {
             SceneManager.LoadScene(currentSceneIndex + 1);
         }
     }
+
+
 }

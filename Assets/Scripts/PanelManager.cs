@@ -51,6 +51,7 @@ public class PanelManager : MonoBehaviour
     public void InMenu()
     {
         SceneManager.LoadScene("MenuScene");
+        ShowCursor();
     }
 
     public void ShowCursor()

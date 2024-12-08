@@ -128,7 +128,7 @@ public class CheckpointManager : MonoBehaviour
         // Если игрок бездействует больше 60 секунд, переходим на "MenuScene"
         if (Time.time - lastInputTime >= idleTimeLimit)
         {
-            SceneManager.LoadScene("MenuScene");
+            _panelManager.InMenu();
         }
     }
 

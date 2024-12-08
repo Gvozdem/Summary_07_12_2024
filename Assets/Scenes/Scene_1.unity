@@ -2195,6 +2195,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 538301173834322701, guid: e4ac82fc5a970664091191fda3acf82e, type: 3}
+      propertyPath: idleTimeLimit
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4136497795010722029, guid: e4ac82fc5a970664091191fda3acf82e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.43

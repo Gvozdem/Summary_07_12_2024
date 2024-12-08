@@ -18,7 +18,6 @@ public class CheckpointManager : MonoBehaviour
     public float updateFlightSpeed = 10f;
 
 
-
     private void Start()
     {
         _panelManager = GameObject.Find("Canvas").GetComponent<PanelManager>();
@@ -65,7 +64,7 @@ public class CheckpointManager : MonoBehaviour
         }
 
         // Возрождаем персонажа на чекпоинте, если он упал
-        if (!controller.isGrounded && transform.position.y < cheackpointTransforms[currentCheckpointIndex].position.y - 20f)
+        if (!controller.isGrounded && transform.position.y < cheackpointTransforms[currentCheckpointIndex].position.y - 40f)
         {
             Respawn();
         }
@@ -140,7 +139,7 @@ public class CheckpointManager : MonoBehaviour
 
     private void Respawn()
     {
-        transform.position = cheackpointTransforms[currentCheckpointIndex].position + new Vector3(0,1,0);
+        transform.position = cheackpointTransforms[currentCheckpointIndex].position + new Vector3(0, 2, 0);
         transform.rotation = cheackpointTransforms[currentCheckpointIndex].rotation;
         Debug.Log($"Respawned at checkpoint {currentCheckpointIndex}!");
     }

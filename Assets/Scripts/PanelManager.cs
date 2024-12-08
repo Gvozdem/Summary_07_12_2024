@@ -8,8 +8,15 @@ public class PanelManager : MonoBehaviour
     public CheckpointManager _player; 
     public GameObject _panel;
 
+
+    public AudioSource _music;
+    private bool musicFlag;
+
     private void Start()
     {
+
+        _music = GetComponent<AudioSource>();
+        musicFlag = true;
         if (SceneManager.GetActiveScene().name != "MenuScene")
         {
             _player = GameObject.Find("Player").GetComponent<CheckpointManager>();
@@ -52,5 +59,20 @@ public class PanelManager : MonoBehaviour
         // Выключаем курсор
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+    }
+
+    public void TurnOnMusic()
+    {
+        if (musicFlag)
+        {
+            _music.Pause();
+            musicFlag = !musicFlag;
+
+        }
+        else
+        {
+            _music.Play();
+            musicFlag = !musicFlag;
+        }
     }
 }

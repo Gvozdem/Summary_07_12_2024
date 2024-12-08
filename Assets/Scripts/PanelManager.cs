@@ -23,7 +23,7 @@ public class PanelManager : MonoBehaviour
     }
     public void StartGame()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Scene_1");
     }
     public void ExitPanel()
     {

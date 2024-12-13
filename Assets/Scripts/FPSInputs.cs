@@ -20,6 +20,8 @@ public class FPSInputs : MonoBehaviour
     [SerializeField] private float _airMultiplier;
     [SerializeField] private GameObject _mesh;
 
+    Collider meshh;
+
     public KeyCode jumpKey = KeyCode.Space;
     public bool playerGrounded;
     
@@ -64,8 +66,8 @@ public class FPSInputs : MonoBehaviour
         }
 
         if (Input.GetMouseButton(1)){
-            ResetJump();
-            MyInput();
+            meshh = _mesh.GetComponent<Collider>();
+            meshh.isTrigger = true;
         }
     }
 

@@ -1,0 +1,162 @@
+# Blender 4.3.0 MTL File: 'Box1.blend'
+# www.blender.org
+
+newmtl BrickWallMat
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/Asus/Desktop/GAMEDEV/Buildings/Textures/building-wall.jpg
+
+newmtl BrickWallMat.002
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/Asus/Desktop/GAMEDEV/Buildings/Textures/building-wall.jpg
+
+newmtl BrickWallMat.003
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/Asus/Desktop/GAMEDEV/Buildings/Textures/building-wall.jpg
+
+newmtl BrickWallMat.004
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/Asus/Desktop/GAMEDEV/Buildings/Textures/building-wall.jpg
+
+newmtl BrickWallMat.005
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/Asus/Desktop/GAMEDEV/Buildings/Textures/building-wall.jpg
+
+newmtl BrickWallMat.006
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/Asus/Desktop/GAMEDEV/Buildings/Textures/building-wall.jpg
+
+newmtl BrickWallWindowsMat
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Asus/Desktop/GAMEDEV/Buildings/Textures/building-windows.jpg
+
+newmtl HardFloorMat
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Asus/Desktop/GAMEDEV/Buildings/Textures/asfalt-floor.jpg
+
+newmtl PipeRoundMat
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Asus/Desktop/GAMEDEV/Buildings/Textures/pipe-round.jpg
+
+newmtl PipeRoundMat.002
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Asus/Desktop/GAMEDEV/Buildings/Textures/pipe-round.jpg
+
+newmtl PipeRoundMat.003
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Asus/Desktop/GAMEDEV/Buildings/Textures/pipe-round.jpg
+
+newmtl PipeRoundMat.004
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Asus/Desktop/GAMEDEV/Buildings/Textures/pipe-round.jpg
+
+newmtl PipeRoundMat.005
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Asus/Desktop/GAMEDEV/Buildings/Textures/pipe-round.jpg
+
+newmtl PipeRoundMat.006
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Asus/Desktop/GAMEDEV/Buildings/Textures/pipe-round.jpg
+
+newmtl Wood
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Asus/Desktop/GAMEDEV/Buildings/Textures/wooden-flat.jpg
+
+newmtl Wood.001
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Asus/Desktop/GAMEDEV/Buildings/Textures/wooden-flat.jpg

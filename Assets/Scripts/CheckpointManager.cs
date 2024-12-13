@@ -7,11 +7,12 @@ public class CheckpointManager : MonoBehaviour
     public PanelManager _panelManager;
 
     public Transform[] cheackpointTransforms;
-    private vThirdPersonController controller;
+    //private vThirdPersonController controller;
+    private FPSInputs fpsController;
     private int currentCheckpointIndex = 0;
 
-    private float lastInputTime = 0f;
-    public float idleTimeLimit = 60f; // 60 секунд
+    private float lastInputTime = 0.000f;
+    public float idleTimeLimit = 60.0f; // 60 секунд
 
     private Transform platformsParent;
 
@@ -23,8 +24,8 @@ public class CheckpointManager : MonoBehaviour
         _panelManager = GameObject.Find("Canvas").GetComponent<PanelManager>();
         _panelManager.HideCursor();
 
-        lastInputTime = Time.time;
-        controller = GetComponent<vThirdPersonController>();
+        
+        fpsController = GetComponent<FPSInputs>();
         if (cheackpointTransforms.Length == 0)
         {
             // Установите стартовую точку как чекпоинт, если они не заданы
@@ -42,17 +43,19 @@ public class CheckpointManager : MonoBehaviour
     private void Update()
     {
         CheckPlayerIdle();
-        if (controller.isGrounded || (!controller.isGrounded && Input.GetMouseButtonUp(0)))
+
+        /*if (fpsController.playerGrounded || (!fpsController.playerGrounded && Input.GetMouseButtonUp(0)))
         {
             controller.airSpeed = 5;
         }
         // Ускорение в воздухе при зажатой ЛКМ
-        if (!controller.isGrounded && Input.GetMouseButtonDown(0))
+        if (!fpsController.playerGrounded && Input.GetMouseButtonDown(0))
         {
             controller.airSpeed = updateFlightSpeed;
-        }
+        }*/
+
         // Проверяем, достиг ли персонаж нового чекпоинта
-        if (controller.isGrounded && IsOnCheckpoint())
+        if (fpsController.playerGrounded && IsOnCheckpoint())
         {
             SetCheckpoint(currentCheckpointIndex);
 
@@ -64,7 +67,7 @@ public class CheckpointManager : MonoBehaviour
         }
 
         // Возрождаем персонажа на чекпоинте, если он упал
-        if (!controller.isGrounded && transform.position.y < cheackpointTransforms[currentCheckpointIndex].position.y - 40f)
+        if (!fpsController.playerGrounded && transform.position.y < cheackpointTransforms[currentCheckpointIndex].position.y - 40f)
         {
             Respawn();
         }
@@ -120,14 +123,20 @@ public class CheckpointManager : MonoBehaviour
     private void CheckPlayerIdle()
     {
         // Обновляем время последнего действия игрока
-        if (controller.input.x != 0 || controller.input.z != 0 || Input.GetButton("Jump"))
+        if (Input.anyKey || _panelManager._panelInfo.activeSelf)
         {
-            lastInputTime = Time.time;
+            lastInputTime = 0f;
+        } 
+        else 
+        {
+            lastInputTime += Time.deltaTime;
+            Debug.Log(lastInputTime);
         }
 
         // Если игрок бездействует больше 60 секунд, переходим на "MenuScene"
-        if (Time.time - lastInputTime >= idleTimeLimit)
+        if (lastInputTime >= idleTimeLimit)
         {
+            Debug.Log($"{lastInputTime} , {idleTimeLimit}");
             _panelManager.InMenu();
         }
     }
@@ -141,6 +150,7 @@ public class CheckpointManager : MonoBehaviour
     {
         transform.position = cheackpointTransforms[currentCheckpointIndex].position + new Vector3(0, 2, 0);
         transform.rotation = cheackpointTransforms[currentCheckpointIndex].rotation;
+        
         Debug.Log($"Respawned at checkpoint {currentCheckpointIndex}!");
     }
 

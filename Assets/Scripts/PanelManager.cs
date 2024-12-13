@@ -9,7 +9,6 @@ public class PanelManager : MonoBehaviour
     public GameObject _panel;
     public GameObject _panelInfo;
 
-
     public AudioSource _music;
     private bool musicFlag;
 
@@ -83,7 +82,7 @@ public class PanelManager : MonoBehaviour
     private void Update()
     {
         if (Input.anyKeyDown)
-            if (_panelInfo != null && _panelInfo.activeSelf)
+            if (!_panelInfo != null && _panelInfo.activeSelf)
             {
                 _panelInfo.SetActive(false);
             }
